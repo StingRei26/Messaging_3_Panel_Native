@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Tag Test</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="styles/style.css" />
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+<!--[Template] Flex Frame: Messaging (Desktop) updated 7/30/18 3:45pm-->
+
+<script type="text/javascript" src="//fast.fonts.net/jsapi/4221a460-4ed2-4039-a07f-d1f4a2739cad.js"></script>
+
+<a target="_blank" href="%%CLICK_URL_UNESC%%%%DEST_URL%%">
+<div id="container">
+    <div id="flex-frame">
+      <div class="media-container">
+      <div class="gradient"></div>
+      <div class="logo">
+            <img onclick="eventTracker.generalEventTrack('clickURL', 'logo', '%%CLICK_URL_UNESC%%%%DEST_URL_UNESC%%')" class="logo-std" src="[%Logo%]" />
+            <img onclick="eventTracker.generalEventTrack('clickURL', 'logo', '%%CLICK_URL_UNESC%%%%DEST_URL_UNESC%%')" class="logo-hi-res" src="[%LogoHiRes%]" />
+      </div>
+        <div class="media-content">
+           <div class="kicker">[%Kicker%]</div>
+          <div class="title">[%Headline%]</div>
+          <div class="summary">[%Summary%]</div>
+          <div onclick="eventTracker.generalEventTrack('clickURL', 'cta', '%%CLICK_URL_UNESC%%%%DEST_URL_UNESC%%')" class="cta">[%CTA%]</div>
+        </div>   
+      </div>
+
+      <div class="content-container">
+      <div class="logo">
+              <img onclick="eventTracker.generalEventTrack('clickURL', 'logo', '%%CLICK_URL_UNESC%%%%DEST_URL_UNESC%%')" class="logo-std" src="[%Logo%]" />
+              <img onclick="eventTracker.generalEventTrack('clickURL', 'logo', '%%CLICK_URL_UNESC%%%%DEST_URL_UNESC%%')" class="logo-hi-res" src="[%LogoHiRes%]" />
+            </div>
+        <div class="content-well">
+          <div class="content-middle-well">
+          	<div class="kicker">[%Kicker%]</div>
+            <div class="title">[%Headline%]</div>
+            <div class="summary">[%Summary%]</div>
+            <div onclick="eventTracker.generalEventTrack('clickURL', 'cta', '%%CLICK_URL_UNESC%%%%DEST_URL_UNESC%%')" class="cta">[%CTA%]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</a>
+
+<script type="text/javascript">
+
+ "use strict";
+
+// Native Tracking Code --------------------------------------------- //
+
+var eventTracker = function () {
+var ETLink = "https://et.nytimes.com/?subject=dfp-ad-events&dfp_creativeid=%ecid!&dfp_lineitemid=%eaid!&dfp_orderid=%ebuy!&dfp_viewport=%%PATTERN:vp%%&pageviewid=%%PATTERN:page_view_id%%&dfp_pos=%%PATTERN:pos%%&dfp_prop=%%PATTERN:prop%%";
+
+var slideCSSClass = "slide";
+var slideNavType = "slideURL";
+var slideClickType = "clickURL";
+
+//Slide navigation control
+var slidesNum = document.getElementsByClassName(slideCSSClass).length;
+var currentSlide = 1;
+
+/*
+* function to call the Nytimes ET pixel link for the slide templte
+* @param curr - current slide
+* @param type - event type 
+*/
+var ETSlideCall = function ETSlideCall(type, curr) {
+var next = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "";
+
+var trackingLink = ETLink + "&dfp_event_type=" + type + "&dfp_event_location=slide-" + curr;
+if (next != "") {
+trackingLink += "_" + "slide-" + next;
+}
+document.createElement('img').src = trackingLink;
+};
+//Public functions
+return {
+/*
+*Next slide function - Updates the current slide and call the ET function
+*/
+nextSlideET: function nextSlideET() {
+var prevSlide = currentSlide;
+if (currentSlide >= slidesNum) {
+currentSlide = 1;
+} else {
+currentSlide++;
+}
+ETSlideCall(slideNavType, prevSlide, currentSlide);
+},
+
+/*
+* Previous slide function - Updates the current slide and call the ET function
+*/
+prevSlideET: function prevSlideET() {
+var prevSlide = currentSlide;
+if (currentSlide <= 1) {
+currentSlide = slidesNum;
+} else {
+currentSlide--;
+}
+ETSlideCall(slideNavType, prevSlide, currentSlide);
+},
+
+/*
+* Click slide function - Redirects to target url
+* @param tag - HTML anchor tag the called this func. 
+* @param next - sums up to the current slide number 
+* usage: <a href="link-to-the-ad-redirect" onclick="eventTracker.slideClickET(this)">
+*/
+slideClickET: function slideClickET(tag) {
+var next = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+// console.log("this", tag);
+event.preventDefault();
+var slideTrack = currentSlide;
+if (next) {
+slideTrack = currentSlide == slidesNum ? 1 : currentSlide + 1;
+}
+ETSlideCall(slideClickType, slideTrack);
+var url = tag.href;
+window.open(url, '_blank');
+},
+
+/*
+* General event tracker call
+* @param eventType - event type to be tracked
+* @param eventLocation - event location to be tracked
+* @param redirectLink - Link to ad page to be called after eventtracker
+*/
+
+generalEventTrack: function generalEventTrack(eventType, eventLocation) {
+var redirectLink = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "";
+
+event.preventDefault();
+var trackingLink = ETLink + "&dfp_event_type=" + eventType + "&dfp_event_location=" + eventLocation;
+document.createElement('img').src = trackingLink;
+if (redirectLink != "") {
+window.open(redirectLink, '_blank');
+}
+},
+
+setETLink: function setETLink(link) {
+ETLink = link;
+},
+
+setSlideCSSClass: function setSlideCSSClass(cssClass) {
+slideCSSClass = cssClass;
+slidesNum = document.getElementsByClassName(slideCSSClass).length;
+},
+setSlideClicktype: function setSlideClicktype(type) {
+slideClickType = type;
+},
+
+setSlideNavType: function setSlideNavType(type) {
+slideNavType = type;
+}
+};
+}();
+
+// End of Native Tracking Code // 
+
+(function() {
+  var header = document.getElementsByClassName('context-bullet')[0];
+  var headerContent = document.getElementsByClassName('context-bullet-content')[0];
+  var noHeaderPages = ['hp', 'int', 'art', 'art,rev', 'art,oak'];
+  var pageType = '%%PATTERN:typ%%';
+  var pagePos = '%%PATTERN:pos%%';
+  var prop = '%%PATTERN:prop%%';
+
+  if (pagePos === 'top') {
+    if (noHeaderPages.indexOf(pageType) > -1) {
+      header.style.display = 'none';
+    } else {
+      headerContent.style.display = 'none';
+    }
+  } else if (prop === 'itabapp') {
+    header.style.display = 'table';
+  } else if (pageType === 'hp') {
+    header.style.display = 'none';
+  } 
+})();
+
+</script>
+
+
+<script type="text/javascript">
+(function() {
+// Hide gradient if necessary
+var toggleGradient = [%ToggleGradient%];
+var gradients = [].slice.call(document.getElementsByClassName('gradient'));
+if (toggleGradient > 0) {
+  gradients.forEach(function(el) {
+    el.style.display = 'none';
+  });
+}
+})();
+</script>
+<div style="display: none;">
+[%CustomTracking%]
+</div>
+<div id="impression-pixel" class="impression-tracker">
+  <img src="[%ImpressionPixel%]" width="1" height="1" border="0" />
+</div>
+<div id="impression-pixel-2" class="impression-tracker">
+  <img src="[%ImpressionPixel2%]" width="1" height="1" border="0" />
+</div>
+<script type="text/javascript">
+parent.postMessage({exclusive: [%Exclusivity%], type: '[%ExclusivityType%]', div:'%%PATTERN:div%%'},'*');
+</script>
+
+
+
+
+</body>
+</html>
