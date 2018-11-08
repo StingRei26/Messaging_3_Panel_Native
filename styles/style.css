@@ -62,7 +62,7 @@ a:visited {
   color: white;
   border: 1px solid #cccccc;
   background-color: black;
-  color: blue;
+  color: white;
 }
 
 .context-bullet {
@@ -88,7 +88,7 @@ a:visited {
 }
 
 .media-container {
-  background:url('[%DesktopBackground%]');
+  background:url('https://mediadc.brightspotcdn.com/dims4/default/51d54dc/2147483647/strip/true/crop/2300x1268+0+0/resize/2300x1268!/quality/90/?url=https%3A%2F%2Fmediadc.brightspotcdn.com%2F4d%2F11%2Fb1dd64676de5a05e3baae63dbc0b%2F75062be96cf4e3e5936f59e6825e3b6e.jpg');
   /*background: url('../messagingAssets/posterimage-1200x270.jpg');*/
   background-size: cover;
   background-position: center;
@@ -209,11 +209,11 @@ a:visited {
   cursor: pointer;
   font-size: 14px;
   padding: 10px 15px;
-  background-color: yellow;
+  background-color: white;
   text-transform: uppercase;
   font-weight: 800;
   border: 1px solid gray;
-  color: pink;
+  color: black;
   text-align: center;
   display: inline-block;
 }
