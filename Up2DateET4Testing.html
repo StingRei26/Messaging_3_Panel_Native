@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Tag Test</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="styles/style.css" />
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+<!--[Template] Flex Frame: Multi-message Slideshow (Desktop)(updated 08/02/18 12:22pm- Added Fonts)-->
+
+
+<div id="container" class="container">
+<!--<div class="context-bullet">
+    <a class="click-target" target="_blank" href="%%CLICK_URL_UNESC%%%%DEST_URL_UNESC%%"></a>
+    <p class="context-bullet-content">[Advertisement] <span>[Indicator]</span></p>
+  </div>-->
+
+  <div id="flex-frame">
+    <div id="media-well">
+      <div class="media-content-well">
+		<img onclick="eventTracker.generalEventTrack('clickURL', 'logo', '%%CLICK_URL_UNESC%%%%DEST_URL_UNESC%%')" id="logographics2" class="" src="https://www.nytimes.com/files/2018/interactive/election-notifications/logo.png" />
+
+        <div class="media-content">
+          
+          <div id="Htitle" class="title"></div>
+          <div id="SlideSum" class="summary"></div>
+          <a onclick="eventTracker.generalEventTrack('clickURL', 'cta', '%%CLICK_URL_UNESC%%%%DEST_URL_UNESC%%')" class="ad-link" href="%%CLICK_URL_UNESC%%%%DEST_URL_UNESC%%" target="_blank"><p class="cta">[%CTA%]</p></a>
+        </div>
+        <div class="pagination">
+          <div class="page-info">
+            <span class="current-page">1</span> of <span class="total-pages">5</span>
+          </div>
+          <div class="btn-group">
+            <button id="left-btn-media" class="left-btn"></button>
+            <button id="right-btn-media" class="right-btn"></button>
+          </div>
+        </div>
+      </div>
+      <div class="gradient"></div>
+
+      <div class="slide-container">
+       
+        <div id="slideContainer-1" class="slide move-to-col-b" data-bg-img="[%Slide1%]">
+          <a class="click-target" target="_blank" href="%%CLICK_URL_UNESC%%[%Slide1Link%]" onclick="eventTracker.slideClickET(this)"><img src="https://comedycentral.mtvnimages.com/images/shows/Futurama/Videos/season_1/futurama_01_0102_zoidberg_physical_640x360.jpg?quality=0.85&width=640&height=361&crop=true"></a>
+        </div>
+        
+        <div id="slideContainer-2" class="slide move-to-col-c" data-bg-img="[%Slide2%]">
+          <a class="click-target" target="_blank" href="%%CLICK_URL_UNESC%%[%Slide2Link%]" onclick="eventTracker.slideClickET(this)"><img src="https://nerdist.com/wp-content/uploads/2017/02/Futurama-Mobile-Game.jpg"></a>
+        </div>
+        
+        <div id="slideContainer-3" class="slide move-to-col-d" data-bg-img="[%Slide3%]">
+          <a class="click-target" target="_blank" href="%%CLICK_URL_UNESC%%[%Slide3Link%]" onclick="eventTracker.slideClickET(this)"><img src="https://cdn.vox-cdn.com/thumbor/pK5KEJ_aCWqqdATgY8G7BVYXsBw=/0x0:2070x1380/1200x800/filters:focal(909x479:1239x809)/cdn.vox-cdn.com/uploads/chorus_image/image/57491281/futurama.0.jpg"></a>
+        </div>
+       
+        <div id="slideContainer-4" class="slide move-to-col-e" data-bg-img="[%Slide4%]">
+          <a class="click-target" target="_blank" href="%%CLICK_URL_UNESC%%[%Slide4Link%]" onclick="eventTracker.slideClickET(this)"><img src="http://digitalspyuk.cdnds.net/17/27/980x490/landscape-1499165193-futurama-2.jpg"></a>
+        </div>
+       
+        <div id="slideContainer-5" class="slide move-to-col-a" data-bg-img="[%Slide5%]">
+          <a class="click-target" target="_blank" href="%%CLICK_URL_UNESC%%[%Slide5Link%]" onclick="eventTracker.slideClickET(this)"><img src="https://pmcvariety.files.wordpress.com/2017/06/futurama-worlds-of-tomorrow.png?w=1000&h=563&crop=1"></a>
+        </div>
+      
+      </div>
+
+
+    </div>
+
+    <div id="content-container">
+      <a class="click-target" target="_blank" href="%%CLICK_URL_UNESC%%%%DEST_URL_UNESC%%"></a>
+      <img onclick="eventTracker.generalEventTrack('clickURL', 'logo', '%%CLICK_URL_UNESC%%%%DEST_URL_UNESC%%')" id = "logographics" class="logo" src="https://www.nytimes.com/files/2018/interactive/election-notifications/logo.png"/>
+        <div class="content-well">
+        
+        <div id="slideheadline" class="title"></div>
+        <div id = "slidesummary" class="summary"></div>
+        <a  onclick="eventTracker.generalEventTrack('clickURL', 'cta', '%%CLICK_URL_UNESC%%%%DEST_URL_UNESC%%')" class="ad-link" href="%%CLICK_URL_UNESC%%%%DEST_URL_UNESC%%" target="_blank"><p class="cta">[%CTA%]</p></a>
+       
+        <div class="pagination">
+          <div class="page-info">
+            <span class="current-page">1</span> of <span class="total-pages">5</span>
+          </div>
+          
+          
+          <div class="btn-group">
+            <button id="left-btn" class="left-btn" onclick="eventTracker.prevSlideET()">
+            <input type="image" src="http://3dwebcube.org/skin/gprev.png" style="height:30px; width:30xp"/>
+            </button>
+          
+           <button id="right-btn" class="right-btn" onclick="eventTracker.nextSlideET()">
+            <input type="image" src="http://i557.photobucket.com/albums/ss13/Stidham16/solid%20silver%20arrow%20icon%20small_zpshsb9s2as.png" style="height:30px; width:30xp"/>
+            
+           </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="next-well">
+      <div class="next-container">
+        <div id="nextContainer-2" class="next move-to-col-b" data-bg-img="[%Slide2%]">
+          <a class="click-target" target="_blank" href="%%CLICK_URL_UNESC%%[%Slide2Link%]" onclick="eventTracker.slideClickET(this, true)"><img src="https://comedycentral.mtvnimages.com/images/shows/Futurama/Videos/season_1/futurama_01_0102_zoidberg_physical_640x360.jpg?quality=0.85&width=640&height=361&crop=true"></a>
+        </div>
+        <div id="nextContainer-3" class="next move-to-col-c" data-bg-img="[%Slide3%]">
+          <a class="click-target" target="_blank" href="%%CLICK_URL_UNESC%%[%Slide3Link%]" onclick="eventTracker.slideClickET(this, true)"><img src="https://nerdist.com/wp-content/uploads/2017/02/Futurama-Mobile-Game.jpg"></a>
+        </div>
+        <div id="nextContainer-4" class="next move-to-col-d" data-bg-img="[%Slide4%]">
+          <a class="click-target" target="_blank" href="%%CLICK_URL_UNESC%%[%Slide4Link%]" onclick="eventTracker.slideClickET(this, true)"><img src="https://cdn.vox-cdn.com/thumbor/pK5KEJ_aCWqqdATgY8G7BVYXsBw=/0x0:2070x1380/1200x800/filters:focal(909x479:1239x809)/cdn.vox-cdn.com/uploads/chorus_image/image/57491281/futurama.0.jpg"></a>
+        </div>
+        <div id="nextContainer-5" class="next move-to-col-e" data-bg-img="[%Slide5%]">
+          <a class="click-target" target="_blank" href="%%CLICK_URL_UNESC%%[%Slide5Link%]" onclick="eventTracker.slideClickET(this, true)"><img src="http://digitalspyuk.cdnds.net/17/27/980x490/landscape-1499165193-futurama-2.jpg"></a>
+        </div>
+        <div id="nextContainer-1" class="next move-to-col-a" data-bg-img="[%Slide1%]">
+          <a class="click-target" target="_blank" href="%%CLICK_URL_UNESC%%[%Slide1Link%]" onclick="eventTracker.slideClickET(this, true)"><img src="https://pmcvariety.files.wordpress.com/2017/06/futurama-worlds-of-tomorrow.png?w=1000&h=563&crop=1"></a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+// Native Tracking Code//
+
+"use strict";
+
+// Native Tracking Code --------------------------------------------- //
+
+var eventTracker = function () {
+var ETLink = "https://et.nytimes.com/?subject=dfp-ad-events&dfp_creativeid=%ecid!&dfp_lineitemid=%eaid!&dfp_orderid=%ebuy!&dfp_viewport=%%PATTERN:vp%%&pageviewid=%%PATTERN:page_view_id%%&dfp_pos=%%PATTERN:pos%%&dfp_prop=%%PATTERN:prop%%";
+
+var slideCSSClass = "slide";
+var slideNavType = "slideURL";
+var slideClickType = "clickURL";
+
+//Slide navigation control
+var slidesNum = 5;
+var currentSlide = 1;
+
+/*
+* function to call the Nytimes ET pixel link for the slide templte
+* @param curr - current slide
+* @param type - event type 
+*/
+var ETSlideCall = function ETSlideCall(type, curr) {
+var next = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "";
+
+var trackingLink = ETLink + "&dfp_event_type=" + type + "&dfp_event_location=slide-" + curr;
+if (next != "") {
+trackingLink += "_" + "slide-" + next;
+}
+document.createElement('img').src = trackingLink;
+};
+//Public functions
+return {
+/*
+*Next slide function - Updates the current slide and call the ET function
+*/
+nextSlideET: function nextSlideET() {
+var prevSlide = currentSlide;
+if (currentSlide >= slidesNum) {
+currentSlide = 1;
+} else {
+currentSlide++;
+}
+ETSlideCall(slideNavType, prevSlide, currentSlide);
+},
+
+/*
+* Previous slide function - Updates the current slide and call the ET function
+*/
+prevSlideET: function prevSlideET() {
+var prevSlide = currentSlide;
+if (currentSlide <= 1) {
+currentSlide = slidesNum;
+} else {
+currentSlide--;
+}
+ETSlideCall(slideNavType, prevSlide, currentSlide);
+},
+
+/*
+* Click slide function - Redirects to target url
+* @param tag - HTML anchor tag the called this func. 
+* @param next - sums up to the current slide number 
+* usage: <a href="link-to-the-ad-redirect" onclick="eventTracker.slideClickET(this)">
+*/
+slideClickET: function slideClickET(tag) {
+var next = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+// console.log("this", tag);
+event.preventDefault();
+var slideTrack = currentSlide;
+if (next) {
+slideTrack = currentSlide == slidesNum ? 1 : currentSlide + 1;
+}
+ETSlideCall(slideClickType, slideTrack);
+var url = tag.href;
+window.open(url, '_blank');
+},
+
+/*
+* General event tracker call
+* @param eventType - event type to be tracked
+* @param eventLocation - event location to be tracked
+* @param redirectLink - Link to ad page to be called after eventtracker
+*/
+
+generalEventTrack: function generalEventTrack(eventType, eventLocation) {
+var redirectLink = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "";
+
+event.preventDefault();
+var trackingLink = ETLink + "&dfp_event_type=" + eventType + "&dfp_event_location=" + eventLocation;
+document.createElement('img').src = trackingLink;
+if (redirectLink != "") {
+window.open(redirectLink, '_blank');
+}
+},
+
+
+setETLink: function setETLink(link) {
+ETLink = link;
+},
+
+setSlideCSSClass: function setSlideCSSClass(cssClass) {
+slideCSSClass = cssClass;
+slidesNum = document.getElementsByClassName(slideCSSClass).length;
+},
+setSlideClicktype: function setSlideClicktype(type) {
+slideClickType = type;
+},
+
+setSlideNavType: function setSlideNavType(type) {
+slideNavType = type;
+}
+};
+}();
+
+
+// End of Native Tracking Code // 
+
+
+(function() {
+
+
+  var copyForSlides = [["[%Slide1Headline%]","[%Slide1Summary%]","[%CTA%]","[%Logo%]"],
+                      ["[%Slide2Headline%]","[%Slide2Summary%]","[%CTA%]","[%Logo%]"],
+                      ["[%Slide3Headline%]","[%Slide3Summary%]","[%CTA%]","[%Logo%]"],
+                      ["[%Slide4Headline%]","[%Slide4Summary%]","[%CTA%]","[%Logo%]"],
+                      ["[%Slide5Headline%]","[%Slide5Summary%]","[%CTA%]","[%Logo%]"]];
+
+
+  /* Set Up Buttons */
+  var leftBtn = document.getElementById('left-btn');
+  var rightBtn = document.getElementById('right-btn');
+  var leftBtnMedia = document.getElementById('left-btn-media')
+  var rightBtnMedia = document.getElementById('right-btn-media');
+  leftBtn.onclick = moveBack;
+  leftBtnMedia.onclick = moveBack;
+  rightBtn.onclick = moveForward;
+  rightBtnMedia.onclick = moveForward;
+
+  /* Paging Logic */
+  var slideContainer = document.getElementsByClassName('slide-container')[0];
+  var nextContainer = document.getElementsByClassName('next-container')[0];
+  var currentPageArr = [].slice.call(document.getElementsByClassName('current-page'));
+  var totalPagesArr = [].slice.call(document.getElementsByClassName('total-pages'));
+  var slides = slideContainer.getElementsByClassName('slide');
+  var next = nextContainer.getElementsByClassName('next');
+  var slidesArray = [].slice.call(slides).filter(hasEmptyBackground);
+  var nextArray = [].slice.call(next).filter(hasEmptyBackground);
+  //var numSlides = slidesArray.length; 
+  var numSlides = 5;
+  var index = 0;
+  var columnClasses = [
+    'move-to-col-a',
+    'move-to-col-b',
+    'move-to-col-c',
+    'move-to-col-d',
+    'move-to-col-e'
+  ];
+
+
+  // Set index total
+  setTotalPages();
+
+  //var pageTracker = 0;
+
+  function setCopy (whichOne)
+  {
+
+   // var 
+    
+    var whichOneProcessed = whichOne%5;
+
+    document.getElementById("slideheadline").innerHTML = copyForSlides[whichOneProcessed][0];
+    document.getElementById("Htitle").innerHTML = copyForSlides[whichOneProcessed][0];
+
+
+    document.getElementById("slidesummary").innerHTML = copyForSlides[whichOneProcessed][1];
+    document.getElementById("SlideSum").innerHTML = copyForSlides[whichOneProcessed][1];
+
+    document.getElementById('logographics').src=copyForSlides[whichOneProcessed][3];
+    document.getElementById('logographics2').src=copyForSlides[whichOneProcessed][3];
+
+    
+
+    //
+
+
+  }
+
+  setCopy (0);
+
+
+  function moveForward() {
+    var currSlide = index % numSlides;
+
+    // Shift the slides
+    shiftSlidesForward(slidesArray, currSlide, numSlides);
+    // Shift the thumbnails
+    shiftSlidesForward(nextArray, currSlide, numSlides);
+
+    index++;
+    setCurrentPage(index, numSlides);
+
+    console.log("current page number: " + index);
+    setCopy (index);
+    eventTracker.nextSlideET();
+  }
+
+  function moveBack() {
+    var currSlide = index % numSlides;
+
+    // Shift the slides
+    shiftSlidesBackward(slidesArray, currSlide, numSlides);
+    // Shift the thumbnails
+    shiftSlidesBackward(nextArray, currSlide, numSlides);
+
+    if (index === 0) {
+      index = numSlides;
+    }
+
+    index--;
+    setCurrentPage(index, numSlides);
+
+    console.log("current page number: " + index);
+    setCopy (index);
+    eventTracker.prevSlideET();
+  }
+
+
+  function shiftSlidesForward(slideArr, currSlide, totalSlides) {
+    slideArr.forEach(removeColumnClasses);
+
+    for (var i = 1; i < totalSlides; i++) {
+      slideArr[(currSlide % totalSlides + i) % totalSlides].classList.add(columnClasses[i]);
+    }
+    slideArr[currSlide % totalSlides].classList.add(columnClasses[0]);
+  }
+
+  function shiftSlidesBackward(slideArr, currSlide, totalSlides) {
+    slideArr.forEach(removeColumnClasses);
+
+    for (var i = 1; i < totalSlides; i++) {
+      slideArr[(currSlide % totalSlides + i) % totalSlides].classList.add(columnClasses[(i + 2) % totalSlides]);
+    }
+    slideArr[currSlide % totalSlides].classList.add(columnClasses[2]);
+  }
+
+
+  function setCurrentPage(pageNumber, totalSlides) {
+    currentPageArr.forEach(function(el) {
+      var text = document.createTextNode('' + ((pageNumber % totalSlides) + 1));
+      el.innerHTML = ''; // clear existing
+      el.appendChild(text);
+    });
+  }
+
+  function hasEmptyBackground(slide, i) {
+    if (slide.getAttribute('data-bg-img') === '') {
+      removeColumnClasses(slide);
+      slide.style.display = 'none';
+      return false;
+    } else {
+      slide.style.backgroundImage = 'url("' + slide.getAttribute('data-bg-img') + '")';
+    }
+    return true;
+  }
+
+  function removeColumnClasses(slide) {
+    // FIXME
+    /*
+    slide.classList.remove(
+      'move-to-col-a',
+      'move-to-col-b',
+      'move-to-col-c',
+      'move-to-col-d',
+      'move-to-col-e'
+    );
+    */
+
+    slide.classList.remove('move-to-col-a');
+    slide.classList.remove('move-to-col-b');
+    slide.classList.remove('move-to-col-c');
+    slide.classList.remove('move-to-col-d');
+    slide.classList.remove('move-to-col-e');
+  }
+
+  function setTotalPages() {
+    totalPagesArr.forEach(function(el) {
+      var text = document.createTextNode('' + numSlides);
+      el.innerHTML = ''; // clear existing
+      el.appendChild(text);
+    });
+  }
+})();
+</script>
+
+<script type="text/javascript">
+(function() {
+  var header = document.getElementsByClassName('context-bullet')[0];
+  var headerContent = document.getElementsByClassName('context-bullet-content')[0];
+  var noHeaderPages = ['hp', 'int', 'art', 'art,rev', 'art,oak'];
+  var pageType = '%%PATTERN:typ%%';
+  var pagePos = '%%PATTERN:pos%%';
+  var prop = '%%PATTERN:prop%%';
+
+  if (pagePos === 'top') {
+    if (noHeaderPages.indexOf(pageType) > -1) {
+      header.style.display = 'none';
+    } else {
+      headerContent.style.display = 'none';
+    }
+  } else if (prop === 'itabapp') {
+    header.style.display = 'table';
+  } else if (pageType === 'hp') {
+    header.style.display = 'none';
+  } 
+})();
+</script>
+
+
+<script type="text/javascript">
+(function() {
+// Hide gradient if necessary
+var toggleGradient = [%ToggleGradient%];
+var gradients = [].slice.call(document.getElementsByClassName('gradient'));
+if (toggleGradient > 0) {
+  gradients.forEach(function(el) {
+    el.style.display = 'none';
+  });
+}
+})();
+</script>
+<div style="display: none;">
+[%CustomTracking%]
+</div>
+<div id="impression-pixel" class="impression-tracker">
+  <img src="[%ImpressionPixel%]" width="1" height="1" border="0" />
+</div>
+<div id="impression-pixel-2" class="impression-tracker">
+  <img src="[%ImpressionPixel2%]" width="1" height="1" border="0" />
+</div>
+<script type="text/javascript">
+parent.postMessage({exclusive: [%Exclusivity%], type: '[%ExclusivityType%]', div:'%%PATTERN:div%%'},'*');
+</script>
+
+<!-- <script type="text/javascript">
+document.cookie='ffiqdj=ctrl;domain=.nytimes.com;path=/; max-age='+60*60*24+';';
+</script>  -->
+
+
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+</body>
+</html>
