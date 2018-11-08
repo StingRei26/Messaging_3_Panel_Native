@@ -59,10 +59,10 @@ a:visited {
   box-sizing: border-box;
   background-size: cover;
   background-position: right;
-  color: white;
+  color: black;
   border: 1px solid #cccccc;
   background-color: black;
-  color: white;
+  color: black;
 }
 
 .context-bullet {
@@ -97,7 +97,7 @@ a:visited {
   float: left;
   position: relative;
   overflow: hidden;
-  max-width: 960px;
+  max-width: 600px;
 }
 
 .media-content {
@@ -159,6 +159,7 @@ a:visited {
   width: 100%;
   align-items: flex-end;
   justify-content: space-between;
+  background-color:dimgray; 
 }
 
 .content-middle-well {
@@ -203,17 +204,16 @@ a:visited {
 .cta {
   font-family: 'Proxima N W01 Bold', sans-serif;
   background-color: transparent;
-  color: white;
+  color:white;
   pointer-events: all;
   flex: none;
   cursor: pointer;
   font-size: 14px;
   padding: 10px 15px;
-  background-color: white;
+  background-color:black ;
   text-transform: uppercase;
   font-weight: 800;
   border: 1px solid gray;
-  color: black;
   text-align: center;
   display: inline-block;
 }
@@ -284,7 +284,7 @@ This controls font color on tablet view */
 
 }
 .content-container {
-    width: 643px;
+    width: 585px;
 }
 }
 
