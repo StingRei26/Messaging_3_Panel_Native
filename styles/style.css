@@ -117,6 +117,17 @@ a:visited {
   background-position: center;
 }
 
+.next-container{
+  /*border: 2px solid yellow;*/
+    width: 418px;
+    height: 268px;
+    right: 0px;
+    background: url('http://www.wa3key.com/nyc5.jpg'); 
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+}
+
 .gradient {
   position: absolute;
   left: 0;
